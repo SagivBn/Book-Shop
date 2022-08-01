@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+table {
+    width: 50rem;
+    height: 5rem;
+    border-collapse: collapse;
+}
+tr,
+td {
+    height: 2rem;
+    text-align: center;
+}
+tr {
+    background-color: white;
+    background-color: white;
+}
+td,
+th {
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+}
+
+th:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+td:hover {
+    background-color: red;
+    color: white;
+    cursor: default;
+}
+
+h1 {
+    color: red;
+    cursor: default;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245, 198, 179, 0.404);
+    align-items: center;
+}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-th {
+    table-layout: fixed;
+}
+
+button {
+    border-radius: 0.5rem;
+    height: 20px;
+    border: 1px solid red;
+    background-color: white;
+    cursor: pointer;
+    color: red;
+}
+
+button:hover {
+    border: 1px solid white;
+    background-color: red;
+    color: white;
+}
+
+.buttons-container {
+    display: flex;
+    align-self: flex-start;
+    column-gap: 0.5rem;
+}
+
+.table-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.book-preview h5 {
+    color: red;
+    font-size: 1.4em;
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+
+.book-preview h6 span {
+    color: tomato;
+    font-size: 2em;
+}
+.book-filter {
+    background-color: rgba(253, 159, 122, 0.404);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 800px;
+}
+.modal {
+    color: red;
+    background-color: rgb(253, 199, 178);
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    left: 150%;
+    height: 50vh;
+    min-width: 300px;
+    width: 800px;
+    text-align: center;
+}
+
+.filters-container {
+    display: flex;
+    column-gap: 0.5rem;
+    align-self: center;
+}
+.filter {
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.filter-price-select {
+    text-transform: capitalize;
+}
+.modal.open {
+    left: 25%;
+    transition: left 0.5s;
+}
+.modal h3 {
+    color: red;
+    text-transform: capitalize;
+}
+.modal h4 {
+    color: red;
+}
+.modal > p {
+    text-align: left;
+}
+
+.user-msg {
+    color: white;
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    background-color: tomato;
+    padding: 10px;
+}
+.user-msg.open {
+    bottom: 10px;
+    transition: bottom 0.5s;
+}
+
+.rate-number {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.next-page-btn {
+    display: non;
+}
+.prev-page-btn {
+    display: none;
+}

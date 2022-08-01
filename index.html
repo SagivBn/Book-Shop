@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Building CRUDL with MVC</title>
+    </head>
+    <body onload="onInit()">
+        <h1>Books Shop</h1>
+        <section class="book-filter">
+            <h5 hidden class="not-found" hidden>Book not found</h5>
+
+            <div class="filters-container">
+                <input
+                    class="filter-search-input"
+                    placeholder="Search for a book name"
+                    onchange="onSearchedBooks(this.value)"
+                    class="search-box"
+                    type="text"
+                />
+                <div class="filter">
+                    Max Price:
+                    <input
+                        type="range"
+                        min="10"
+                        max="300"
+                        value="200"
+                        class="filter-price-range"
+                        onchange="onSetFilterBy({maxPrice: this.value},this,'.filter-price-res')"
+                    />
+                    <span class="filter-price-res"></span>
+                </div>
+                <div class="filter">
+                    Min Rate:
+                    <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        value="1"
+                        class="filter-rate-range"
+                        onchange="this.title=this.value;onSetFilterBy({minRate: this.value})"
+                    />
+                </div>
+            </div>
+        </section>
+        <section class="books-container"></section>
+        <div class="table-wrapper">
+            <div class="buttons-container">
+                <button onclick="onAddBook()">Add Book</button>
+                <button class="prev-page-btn" onclick="onPrevPage()">
+                    Previous Page
+                </button>
+                <button class="next-page-btn" onclick="onNextPage()">
+                    Next Page
+                </button>
+            </div>
+            <div class="table-container">
+                <table class="sortable">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th onclick="onSetSortBy('name')">Title</th>
+                            <th onclick="onSetSortBy('price')">Price</th>
+                            <th>Rate</th>
+                            <th>Book Image</th>
+                            <th class="action-th">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="books-table-container"></tbody>
+                    <div class="modal">
+                        <h3></h3>
+                        <h4>Book Price <span></span></h4>
+                        <h5>Book Description</h5>
+                        <p></p>
+                        <div class="rating"></div>
+                        <br />
+                        <button onclick="onCloseModal()">Close</button>
+                    </div>
+                </table>
+            </div>
+        </div>
+        <div class="user-msg"></div>
+        <script src="/js/util.sercive.js"></script>
+        <script src="/js/storage.service.js"></script>
+        <script src="/js/book.service.js"></script>
+        <script src="/js/book.controlller.js"></script>
+    </body>
+</html>
