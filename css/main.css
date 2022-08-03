@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 table {
-    width: 50rem;
+    width: 65rem;
     height: 5rem;
     border-collapse: collapse;
 }
@@ -70,12 +70,51 @@ button:hover {
     color: white;
 }
 
-.buttons-container {
-    display: flex;
-    align-self: flex-start;
-    column-gap: 0.5rem;
+.lang {
+    border-radius: 0.5rem;
+    height: 20px;
+    padding: 2px;
+    border: 1px solid red;
+    background-color: white;
+    cursor: pointer;
+    color: red;
+    outline-color: red;
 }
 
+.lang:hover {
+    border: 1px solid white;
+    background-color: red;
+    color: white;
+}
+.filter {
+    border-radius: 0.5rem;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    outline-color: red;
+}
+.filter-search-input {
+    border-radius: 0.5rem;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid red;
+    background-color: white;
+    cursor: text;
+    color: red;
+    outline-color: red;
+}
+input::placeholder {
+    color: #f00;
+}
+.range {
+    background-color: white;
+    accent-color: rgba(253, 159, 122, 0.404);
+}
+input[type='range'] {
+    cursor: pointer;
+}
 .table-container {
     display: flex;
     margin-top: 20px;
@@ -88,7 +127,7 @@ button:hover {
     text-decoration: overline;
 }
 
-.book-preview h6 span {
+.book-preview h6 {
     color: tomato;
     font-size: 2em;
 }
@@ -96,8 +135,10 @@ button:hover {
     background-color: rgba(253, 159, 122, 0.404);
     padding: 10px;
     margin-bottom: 20px;
-    width: 800px;
+    width: 1050px;
+    height: 50px;
 }
+
 .modal {
     color: red;
     background-color: rgb(253, 199, 178);
